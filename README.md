@@ -14,4 +14,7 @@ Model fromJson(Map<String, dynamic> json) {
     return this;    
 } 
 ```
-4. Use  var result = TServiceResponse<Model>(jsonString, new Model());
+4. Use it:
+```dart
+ var result = TServiceResponse<Model>(jsonString, new Model());
+```
