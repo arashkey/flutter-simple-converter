@@ -5,7 +5,7 @@ This project for converting json to Object
 ## Getting Started
 1. Get flutter packages
 2. For making fromJson and toJson functions go to [Convector](https://javiercbk.github.io/json_to_dart/ "Convector")
- website and make your class in models folder
+ website and make your class in models folder from your json data
 3. Extends model class from  IServiceResponce like this
 ```dart
 class YourModel extends IServiceResponce<YourModel>{
