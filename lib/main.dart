@@ -33,6 +33,8 @@ class Home extends StatefulWidget {
 class HomeState extends State<Home> {
   Merchant _data = Merchant();
 
+  List<Merchant> _arrayData;
+
   initState() {
     super.initState();
     this.fetchData();
@@ -50,6 +52,9 @@ class HomeState extends State<Home> {
           Text("menus count: " +
               (this._data.menus == null ? "_" : this._data.menus.length)
                   .toString()),
+          Text("array of data count: " +
+              (this._arrayData == null ? "_" : this._arrayData.length)
+                  .toString()),
         ],
       ),
       appBar: AppBar(title: Text('Convert Map json to Object Class')),
@@ -58,7 +63,10 @@ class HomeState extends State<Home> {
 
   void fetchData() async {
     var result = await (new MerchantService()).getMerchantAsync();
-    this._data = result.result;
+    this._data = result;
+
+    var arrayResult = await (new MerchantService()).getListMerchantAsync();
+    this._arrayData = arrayResult;
     setState(() {});
   }
 }

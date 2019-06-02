@@ -10,6 +10,7 @@ This project for converting json to Object
 ```dart
 class YourModel extends IServiceResponce<YourModel>{
   // ...
+  
   }
 ```
 4. Convert fromJson function in your model to this format:   
@@ -23,4 +24,8 @@ YourModel fromJson(Map<String, dynamic> json) {
 5. Use it:
 ```dart
  var result = TServiceResponse<YourModel>(jsonString, new YourModel());
+```
+6. If you want to return array of YourModel you can use this:
+```dart
+ var arrayResult = ListTServiceResponse<YourModel>(jsonString, new YourModel());
 ```

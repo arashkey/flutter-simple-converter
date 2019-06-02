@@ -6,14 +6,13 @@ class ListTServiceResponse<T extends IServiceResponce>  {
   List<T> listResult = List<T>();
 
 
-  fromJson(Map<String, dynamic> json, T instance) {
+  List<T> fromJson(List<Map<String, dynamic>>  json, T instance) {
 
-    listResult = _makeListResult(json, instance);
-    return this;
-  }
+    return _makeListResult(json, instance);
+   }
 
-  List<T> _makeListResult(Map<String, dynamic> json, T instance) {
-    json['result'].forEach((Map v) {
+  List<T> _makeListResult(List<Map<String, dynamic>>  json, T instance) {
+    json.forEach((Map v) {
       listResult.add(instance.fromJson(v));
     });
     return listResult;
