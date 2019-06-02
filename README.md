@@ -4,4 +4,5 @@ This project for converting json to Object
 
 ## Getting Started
 ### At the first get flutter packages
-### for making fromJson and toJson functions in *.g.dart run  make-classes.bat
+### for making fromJson and toJson functions go to https://javiercbk.github.io/json_to_dart/ website
+ and make your class
