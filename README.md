@@ -9,7 +9,7 @@ This project for converting json to Object
 3. Convert fromJson function in your model to this format:   
 ```dart
 Model fromJson(Map<String, dynamic> json) {
-...
+//...
     
     return this;    
 } 
