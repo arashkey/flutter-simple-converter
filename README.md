@@ -3,7 +3,7 @@
 This project for converting json to Object
 
 ## Getting Started
-1. At the first get flutter packages
+1. Get flutter packages
 2. For making fromJson and toJson functions go to [Convector](https://javiercbk.github.io/json_to_dart/ "Convector")
  website and make your class in models folder
 3. Extends model class from  IServiceResponce like this
